@@ -1,0 +1,6 @@
+name: mvi-devenv
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: devenv for mvi
