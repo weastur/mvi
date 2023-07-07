@@ -1,6 +1,14 @@
 # mvi
 Minimal Viable Infrastructure
 
+```shell
+python3 -m venv venv
+. ./venv/bin/activate
+pip install -r requirements.txt
+ansible -i inventory.py all -m ping
+ansible-inventory -i inventory.py --graph --vars
+```
+
 ## test infra
 
 ```shell

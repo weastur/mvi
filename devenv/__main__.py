@@ -19,7 +19,7 @@ for idx in range(3):
         labels={
             "env": "dev",
             "id": f"{idx}",
-            "docker": "",
+            "group_docker": "",
         },
         networks=[
             hcloud.ServerNetworkArgs(
