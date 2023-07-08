@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![gitlint](https://github.com/weastur/mvi/workflows/gitlint/badge.svg)
+![ansible-lint](https://github.com/weastur/mvi/workflows/ansible-lint/badge.svg)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/weastur/mvi/main.svg)](https://results.pre-commit.ci/latest/github/weastur/mvi/main)
 
 Minimal Viable Infrastructure
