@@ -11,6 +11,8 @@
       - curl
       - dnsutils
       - ethtool
+      - gnupg-agent
+      - gnupg2
       - hping3
       - htop
       - httpie
