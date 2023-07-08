@@ -1,6 +1,7 @@
 # mvi
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/weastur/mvi/main.svg)](https://results.pre-commit.ci/latest/github/weastur/mvi/main)
 
 Minimal Viable Infrastructure
 
