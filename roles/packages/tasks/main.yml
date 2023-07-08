@@ -2,9 +2,9 @@
 - name: Install packages
   ansible.builtin.apt:
     pkg:
-    - htop
-    - curl
+      - htop
+      - curl
     state: present
-    update_cache: yes
-    autoclean: yes
-    autoremove: yes
+    update_cache: true
+    autoclean: true
+    autoremove: true
