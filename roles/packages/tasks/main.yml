@@ -1,0 +1,10 @@
+---
+- name: Install packages
+  ansible.builtin.apt:
+    pkg:
+    - htop
+    - curl
+    state: present
+    update_cache: yes
+    autoclean: yes
+    autoremove: yes
