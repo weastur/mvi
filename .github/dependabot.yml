@@ -7,3 +7,15 @@ updates:
       interval: "weekly"
     labels:
       - "dependency-update"
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependency-update"
+  - package-ecosystem: "pip"
+    directory: "/devenv/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependency-update"
