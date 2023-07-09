@@ -1,0 +1,2 @@
+---
+repositories_filename: "{{ apt_repos_filename | default('ansible_managed') }}"

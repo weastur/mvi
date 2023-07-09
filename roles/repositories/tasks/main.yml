@@ -1,0 +1,41 @@
+---
+- name: Cleanup managed repo files
+  copy:
+    dest: "{{ file }}"
+    owner: root
+    group: root
+    mode: '0644'
+    content: |
+      # MANAGED BY ANSIBLE
+  loop:
+    - /etc/apt/sources.list
+    - /etc/apt/sources.list.d/{{ repositories_filename }}.list
+  loop_control:
+    label: "{{ file }}"
+    loop_var: file
+
+- name: Find all files in /etc/apt/sources.list.d/
+  find:
+    paths: /etc/apt/sources.list.d/
+    file_type: any
+    excludes: "{{ repositories_filename }}.list"
+  register: files_to_delete
+
+- name: Delete all files in /etc/apt/sources.list.d/
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  loop: "{{ files_to_delete.files }}"
+
+- name: Add repository into sources list
+  ansible.builtin.apt_repository:
+    repo: "{{ repo }}"
+    state: present
+    filename: "{{ repositories_filename }}"
+    update_cache: false
+  loop: "{{ repositories_list }}"
+  loop_control:
+    label: "{{ repo }}"
+    loop_var: repo
+  notify:
+    - Update apt cache
