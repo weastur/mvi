@@ -1,2 +1,2 @@
 ansible==8.1.0
-hcloud==1.24.0
+hcloud==1.25.0
