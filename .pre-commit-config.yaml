@@ -33,6 +33,6 @@ repos:
       - id: yamllint
         entry: yamllint -s
   - repo: https://github.com/ansible/ansible-lint
-    rev: v6.20.0
+    rev: v6.20.2
     hooks:
       - id: ansible-lint
